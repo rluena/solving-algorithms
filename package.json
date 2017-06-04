@@ -1,0 +1,11 @@
+{
+  "name": "solutions",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Rabii Luena",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.4.1"
+  }
+}

@@ -1,26 +1,10 @@
 /**
  * @param {String} str
  */
-module.exports.reverseString = functon(str) {
-    return str;
+module.exports.reverseString = function (str) {
+    var newStr = '';
+    for (var i = str.length - 1; i >= 0; i--) {
+        newStr += str[i];
+    }
+    return newStr;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -4,6 +4,9 @@
   "main": "app.js",
   "author": "Rabii Luena",
   "license": "MIT",
+  "scripts": {
+    "test": "mocha test"
+  },
   "dependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.4.1"

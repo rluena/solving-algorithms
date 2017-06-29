@@ -1,15 +1,15 @@
 const mocha = require('mocha');
 const expect = require('chai').expect;
-const reverseString = require('../app/basic').reverseString;
-const factorize = require('../app/basic').factorize;
-const palindrome = require('../app/basic').palindrome;
-const findLongestWord = require('../app/basic').findLongestWord;
-const titleCase = require('../app/basic').titleCase;
-const confirmEnding = require('../app/basic').confirmEnding;
-const repeatStringNumTimes = require('../app/basic').repeatStringNumTimes;
-const truncateString = require('../app/basic').truncateString;
-const mutation = require('../app/basic').mutation;
-const destroyer = require('../app/basic').destroyer;
+const reverseString = require('../solutions/basic').reverseString;
+const factorize = require('../solutions/basic').factorize;
+const palindrome = require('../solutions/basic').palindrome;
+const findLongestWord = require('../solutions/basic').findLongestWord;
+const titleCase = require('../solutions/basic').titleCase;
+const confirmEnding = require('../solutions/basic').confirmEnding;
+const repeatStringNumTimes = require('../solutions/basic').repeatStringNumTimes;
+const truncateString = require('../solutions/basic').truncateString;
+const mutation = require('../solutions/basic').mutation;
+const destroyer = require('../solutions/basic').destroyer;
 
 describe('Basic Algorithms', () => {
    

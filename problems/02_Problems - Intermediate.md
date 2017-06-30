@@ -3,12 +3,12 @@ We'll pass you an array of two numbers. Return the sum of those two numbers and 
 
 The lowest number will not always come first.
 
-#### HINT:
+#### Hint:
 - Math.max()
 - Math.min()
 - Array.prototype.reduce()
 
-#### TEST CASES:
+#### Test Cases:
 - sumAll([1, 4]) should return a number.
 - sumAll([1, 4]) should return 10.
 - sumAll([4, 1]) should return 10.
@@ -23,14 +23,14 @@ STATUS: DONE
 Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
 
 
-#### HINT:
+#### Hint:
 Comparison Operators
 - Array.prototype.slice()
 - Array.prototype.filter()
 - Array.prototype.indexOf()
 - Array.prototype.concat()
 
-#### TEST CASES:
+#### Test Cases:
 - diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]) should return an array.
 - ["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"] should return ["pink wool"].
 - ["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"] should return ["diorite", "pink wool"].
@@ -46,13 +46,13 @@ Convert the given number into a roman numeral.
 
 All roman numerals answers should be provided in upper-case.
 
-#### HINT:
+#### Hint:
 Roman Numerals
 - Array.prototype.splice()
 - Array.prototype.indexOf()
 - Array.prototype.join()
 
-#### TEST CASES:
+#### Test Cases:
 
 - convertToRoman(2) should return "II".
 - convertToRoman(3) should return "III".
@@ -88,12 +88,12 @@ Make a function that looks through an array of objects (first argument) and retu
 
 For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), because it contains the property and its value, that was passed on as the second argument.
 
-HINT:
+Hint:
 - Global Object
 - Object.prototype.hasOwnProperty()
 - Object.keys()
 
-#### TEST CASES:
+#### Test Cases:
 - whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }) should return [{ first: "Tybalt", last: "Capulet" }].
 - whatIsInAName([{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }], { "a": 1 }) should return [{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }].
 - whatIsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "b": 2 }) should return [{ "a": 1, "b": 2 }, { "a": 1, "b": 2, "c": 2 }].
@@ -112,12 +112,12 @@ Third argument is what you will be replacing the second argument with (after).
 #### NOTE: 
 - Preserve the case of the original word when you are replacing it. For example if you mean to replace the word "Book" with the word "dog", it should be replaced as "Dog"
 
-#### HINT:
+#### Hint:
 - Array.prototype.splice()
 - String.prototype.replace()
 - Array.prototype.join()
 
-#### TEST CASES:
+#### Test Cases:
 - myReplace("Let us go to the store", "store", "mall") should return "Let us go to the mall".
 - myReplace("He is Sleeping on the couch", "Sleeping", "sitting") should return "He is Sitting on the couch".
 - myReplace("This has a spellngi error", "spellngi", "spelling") should return "This has a spelling error".
@@ -134,14 +134,14 @@ If a word begins with a vowel you just add "way" to the end.
 
 Input strings are guaranteed to be English words in all lowercase.
 
-#### HINT:
+#### Hint:
 - Array.prototype.indexOf()
 - Array.prototype.push()
 - Array.prototype.join()
 - String.prototype.substr()
 - String.prototype.split()
 
-#### TEST CASES.
+#### Test Cases:
 - translatePigLatin("california") should return "aliforniacay".
 - translatePigLatin("paragraphs") should return "aragraphspay".
 - translatePigLatin("glove") should return "oveglay".
@@ -160,11 +160,11 @@ For example, for the input GCG, return [["G", "C"], ["C","G"],["G", "C"]]
 
 The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.
 
-#### HINT:
+#### Hint:
 - Array.prototype.push()
 - String.prototype.split()
 
-#### TEST CASES:
+#### Test Cases:
 - pairElement("ATCGA") should return [["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]].
 - pairElement("TTGAG") should return [["T","A"],["T","A"],["G","C"],["A","T"],["G","C"]].
 - pairElement("CTCTA") should return [["C","G"],["T","A"],["C","G"],["T","A"],["A","T"]].
@@ -181,11 +181,11 @@ Find the missing letter in the passed letter range and return it.
 
 If all letters are present in the range, return undefined.
 
-#### HINT:
+#### Hint:
 - String.prototype.charCodeAt()
 - String.fromCharCode()
 
-#### TEST CASES:
+#### Test Cases:
 - fearNotLetter("abce") should return "d".
 - fearNotLetter("abcdefghjklmno") should return "i".
 - fearNotLetter("bcd") should return undefined.
@@ -198,10 +198,10 @@ Check if a value is classified as a boolean primitive. Return true or false.
 
 Boolean primitives are true and false.
 
-#### HINT:
+#### Hint:
 - Boolean Objects
 
-#### TEST:
+#### Test Cases:
 - booWho(true) should return true.
 - booWho(false) should return true.
 - booWho([1, 2, 3]) should return false.
@@ -219,11 +219,11 @@ Check if a value is classified as a boolean primitive. Return true or false.
 
 Boolean primitives are true and false.
 
-#### HINT:
+#### Hint:
 - Arguments object
 - Array.prototype.reduce()
 
-#### TEST:
+#### Test Cases:
 - uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) should return [1, 3, 2, 5, 4].
 - uniteUnique([1, 3, 2], [1, [5]], [2, [4]]) should return [1, 3, 2, [5], [4]].
 - uniteUnique([1, 2, 3], [5, 2, 1]) should return [1, 2, 3, 5].
@@ -234,12 +234,12 @@ Boolean primitives are true and false.
 
 Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a string to their corresponding HTML entities.
 
-#### HINT:
+#### Hint:
 - RegExp
 - HTML Entities
 - String.prototype.replace()
 
-#### TEST CASES:
+#### Test Cases:
 - convertHTML("Dolce & Gabbana") should return Dolce &​amp; Gabbana.
 - convertHTML("Hamburgers < Pizza < Tacos") should return Hamburgers &​lt; Pizza &​lt; Tacos.
 - convertHTML("Sixty > twelve") should return Sixty &​gt; twelve.
@@ -252,11 +252,11 @@ Convert the characters &, <, >, " (double quote), and ' (apostrophe), in a strin
 
 Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
 
-#### HINT:
+#### Hint:
 - RegExp
 - String.prototype.replace()
 
-#### TEST:
+#### Test Cases:
 - spinalCase("This Is Spinal Tap") should return "this-is-spinal-tap".
 - spinalCase("thisIsSpinalTap") should return "this-is-spinal-tap".
 - spinalCase("The_Andy_Griffith_Show") should return "the-andy-griffith-show".

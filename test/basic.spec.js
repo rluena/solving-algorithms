@@ -42,7 +42,7 @@ describe('Basic Algorithms', () => {
 		});
 	});
 
-	/*describe('#palindrome', () => {
+	describe('#palindrome', () => {
 		it('should be a boolean', () => {
 			expect(palindrome('eye')).to.be.a('boolean');
 		});
@@ -95,7 +95,7 @@ describe('Basic Algorithms', () => {
 			expect(palindrome('1 eye for of 1 eye.')).to.be.equal(false);
 		});
 	});
-*/
+
 	describe('#findLongestWord', () => {
 		it('should be a number', () => {
 			expect(findLongestWord('The quick brown fox jumped over the lazy dog')).to.be.a('number');

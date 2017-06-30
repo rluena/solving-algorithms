@@ -5,8 +5,8 @@
  * @return {String}
  */
 module.exports.reverseString = (str) => {
-	var newStr = '';
-	for (var i = str.length - 1; i >= 0; i--) {
+	let newStr = '';
+	for (let i = str.length - 1; i >= 0; i--) {
 		newStr += str[i];
 	}
 	return newStr;
@@ -25,13 +25,13 @@ module.exports.reverseString = (str) => {
  */
 module.exports.factorize = (num) => {
 
-	var total = 1;
+	let total = 1;
 	if (typeof (num) !== 'number') return false;
 	
 	if (num === 0) {
 		total = 1;
 	} else {
-		for (var i = 1; i <= num; i++) {
+		for (let i = 1; i <= num; i++) {
 			total *= i;
 		}
 	}
@@ -46,14 +46,14 @@ module.exports.factorize = (num) => {
  * @param {String} str
  * @return {Boolean}
  */
-/*module.exports.palindrome = (str) => {
+module.exports.palindrome = (str) => {
 
 	// Removing white spaces and non-alphanumeric characters
-	var str = str.replace(/[\s\W_]+/g, '');
-	var newStr = str.split(' ').reverse().join();
+	let  newStr = str.replace(/[\W_\s]/g, "").toLowerCase();
+	let  reversedStr = newStr.split('').reverse().join('');
 
-	return str === newStr ? true : false;
-}*/
+	return newStr === reversedStr ? true : false;
+}
 
 /**
  * Find the longest word in a string
@@ -62,10 +62,10 @@ module.exports.factorize = (num) => {
  * @param {String} str
  */
 module.exports.findLongestWord = (str) => {
-	var arr = str.split(' ');
+	let arr = str.split(' ');
 
 	// First solution
-	var longest = arr.reduce((len, next) => {
+	let longest = arr.reduce((len, next) => {
 		if (next.length > len) {
 			len = next.length;
 		}
@@ -73,9 +73,9 @@ module.exports.findLongestWord = (str) => {
 	}, 0);
 
 	// Alternative solution
-	/*var len = 0;
-	for (var i = 0; i < arr.length; i++) {
-	    var word = arr[i];
+	/*let len = 0;
+	for (let i = 0; i < arr.length; i++) {
+	    let word = arr[i];
 	    len = word.length > len ? word.length : len;        
 	}*/
 	return longest;
@@ -91,11 +91,11 @@ module.exports.findLongestWord = (str) => {
  * @return {String}
  */
 module.exports.titleCase = (str) => {
-	var arr = str.split(' ');
-	var newStr = arr.map((next) => {
-		var newArr = next.toLowerCase().split('');
-		var wordCased = '';
-		for (var i = 0; i < newArr.length; i++) {
+	let arr = str.split(' ');
+	let newStr = arr.map((next) => {
+		let newArr = next.toLowerCase().split('');
+		let wordCased = '';
+		for (let i = 0; i < newArr.length; i++) {
 			if (i === 0) {
 				wordCased += newArr[i].toUpperCase();
 			} else {
@@ -118,10 +118,10 @@ module.exports.titleCase = (str) => {
  * @return {Array}
  */
 module.exports.largestOfFour = (arr) => {
-	var newArr = [];
-	for (var i = 0; i < arr.length; i++) {
-		var numberArr = arr[i];
-		var num = numberArr.reduce((largest, next) => {
+	let newArr = [];
+	for (let i = 0; i < arr.length; i++) {
+		let numberArr = arr[i];
+		let num = numberArr.reduce((largest, next) => {
 			largest = next > largest ? next : largest;
 			return largest;
 		}, 0);
@@ -143,7 +143,7 @@ module.exports.largestOfFour = (arr) => {
  * 
  */
 module.exports.confirmEnding = (word, str) => {
-	var count = str.length;
+	let count = str.length;
 	return word.substr(-count) === str ? true : false;
 }
 
@@ -158,8 +158,8 @@ module.exports.confirmEnding = (word, str) => {
  * @return {String}
  */
 module.exports.repeatStringNumTimes = (str, times) => {
-	var newStr = '';
-	for (var i = 0; i < times; i++) {
+	let newStr = '';
+	for (let i = 0; i < times; i++) {
 		newStr += str;
 	}
 	newStr = times < 0 ? '' : newStr;
@@ -202,8 +202,8 @@ module.exports.chunkArrayInGroups = (arr, len) => {
 	const newArr = [];
 	let jump = len - 1;
 
-	for (var i = 0; i < arr.length; i + jump) {
-		var item = arr.splice(i, len);
+	for (let i = 0; i < arr.length; i + jump) {
+		let item = arr.splice(i, len);
 		newArr.push(item);
 	}
 	return newArr;
@@ -220,7 +220,7 @@ module.exports.chunkArrayInGroups = (arr, len) => {
  */
 module.exports.slasher = (arr, len) => {
 	const newArr = [];
-	for (var i = len; i < arr.length; i++) {
+	for (let i = len; i < arr.length; i++) {
 		const item = arr[i];
 		newArr.push(item);
 	}
@@ -237,9 +237,9 @@ module.exports.slasher = (arr, len) => {
  * @return {Boolean}
  */
 module.exports.mutation = (arr) => {
-	var notFound = false;
-	for (var i = 0; i < arr[1].length; i++) {
-		var char = arr[1][i];
+	let notFound = false;
+	for (let i = 0; i < arr[1].length; i++) {
+		let char = arr[1][i];
 		if (arr[0].toLowerCase().indexOf(char.toLowerCase()) === -1) {
 			notFound = true;
 		}
@@ -259,7 +259,7 @@ module.exports.mutation = (arr) => {
  * @return {Array}
  */
 module.exports.destroyer = (arr, ...args) => {
-	var newItem = arr.filter((item, index) => {
+	let newItem = arr.filter((item, index) => {
 		if (args.indexOf(item) === -1) {
 			return item;
 		}
@@ -280,7 +280,7 @@ module.exports.getIndexToIns = (arr, num) => {
 		pos = sortedArr.length;	
 	} else {
 
-		for (var i = 0; i < sortedArr.length; i++) {
+		for (let i = 0; i < sortedArr.length; i++) {
 			let item = sortedArr[i];
 			let nextItem = sortedArr[i + 1];
 
@@ -304,7 +304,7 @@ module.exports.getIndexToIns = (arr, num) => {
  */
 module.exports.rot13 = (str) => {
 	let newStr = '';
-	for (var i = 0; i < str.length; i++) {
+	for (let i = 0; i < str.length; i++) {
 		const char = str[i];
 		let code = char.charCodeAt(0);
 

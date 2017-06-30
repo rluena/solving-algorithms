@@ -1,12 +1,12 @@
-## 1) Reverse a String
+## 1) REVERSE A STRING
 
 Reverse the provided string.
 
-#### Test:
+#### Test Cases:
 - reverseString('Hello') should return a string
 - reverseString('Hello!') should return !olleH
 
-## 2) Factorialize a Number
+## 2) FACTORIALIZE A STRING
 
 Return the factorial of the provided integer.
 If the integer is represented with the letter n, a factorial is the product of all positive integers less than or equal to n.
@@ -17,7 +17,7 @@ If the integer is represented with the letter n, a factorial is the product of a
 - factorialize(20) should return 2432902008176640000
 - factorialize(0) should return 1.
 
-## 3) Check for Palindromes
+## 3) CHECK FOR PALINDROMES
 
 Return true if the given string is a palindrome. Otherwise, return false.
 
@@ -30,7 +30,7 @@ You'll need to remove all non-alphanumeric characters (punctuation, spaces and s
 String.prototype.replace();
 String.prototype.toLowerCase()
 
-#### Test
+#### Test Cases:
 - palindrome("eye") should return a boolean.
 - palindrome("eye") should return true
 - palindrome("_eye") should return true.
@@ -45,7 +45,7 @@ String.prototype.toLowerCase()
 - palindrome("0_0 (: /-\ :) 0-0") should return true.
 - palindrome("five|\_/|four") should return false.
 
-## 4) Find the Longest Word in a String
+## 4) FIND THE LONGEST WORD IN A STRING
 
 Return the length of the longest word in the provided sentence.
 
@@ -61,7 +61,7 @@ Return the length of the longest word in the provided sentence.
 - findLongestWord("What is the average airspeed velocity of an unladen swallow") should return 8
 - findLongestWord("What if we try a super-long word such as otorhinolaryngology") should return 19.
 
-## 5) Title Case a Sentence
+## 5) TITLE CASE A SENTENCE
 
 Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
 
@@ -70,23 +70,23 @@ For the purpose of this exercise, you should also capitalize connecting words li
 #### Hint:
 String.prototype.split()
 
-#### Test:
+#### Test Cases:
 - titleCase("I'm a little tea pot") should return a string.
 - titleCase("I'm a little tea pot") should return "I'm A Little Tea Pot".
 - titleCase("sHoRt AnD sToUt") should return "Short And Stout".
 - titleCase("HERE IS MY HANDLE HERE IS MY SPOUT") should return "Here Is My Handle Here Is My Spout".
 
-## 6) Return Largest Numbers in Arrays
+## 6) RETURN LARGEST NUMBERS IN ARRAYS
 Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
 
 Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
 
-#### Test.
+#### Test Cases:
 - largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]) should return an array.
 - largestOfFour([[13, 27, 18, 26], [4, 5, 1, 3], [32, 35, 37, 39], [1000, 1001, 857, 1]]) should return [27,5,39,1001].
 - largestOfFour([[4, 9, 1, 3], [13, 35, 18, 26], [32, 35, 97, 39], [1000000, 1001, 857, 1]]) should return [9, 35, 97, 1000000].
 
-## 7) Confirm Endings
+## 7) CONFIRM ENDINGS
 
 Check if a string (first argument, str) ends with the given target string (second argument, target).
 
@@ -94,7 +94,7 @@ Check if a string (first argument, str) ends with the given target string (secon
 - String.prototype.substr()
 - String.prototype.substring()
 
-#### Test:
+#### Test Cases:
 - confirmEnding("Bastian", "n") should return true.
 - confirmEnding("Connor", "n") should return false.
 - confirmEnding("Walking on water and developing software from a specification are easy if both are frozen", "specification") should return false.
@@ -104,14 +104,14 @@ Check if a string (first argument, str) ends with the given target string (secon
 - confirmEnding("If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing", "mountain") should return false.
 ##### Do not use the built-in method .endsWith() to solve the challenge.
 
-## 9) Repeat a string
+## 9) REPEAT A STRING
 
 Repeat a given string (first argument) num times (second argument). Return an empty string if num is not a positive number.
 
 #### Hint:
 
 
-#### Test:
+#### Test Cases:
 - repeatStringNumTimes("*", 3) should return "***".
 - repeatStringNumTimes("abc", 3) should return "abcabcabc".
 - repeatStringNumTimes("abc", 4) should return "abcabcabcabc".
@@ -119,7 +119,7 @@ Repeat a given string (first argument) num times (second argument). Return an em
 - repeatStringNumTimes("*", 8) should return "********".
 - repeatStringNumTimes("abc", -2) should return "".
 
-## 10) Truncate a string
+## 10)TRUNCATE A STRING
 
 Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
 
@@ -130,7 +130,7 @@ However, if the given maximum string length num is less than or equal to 3, then
 #### Hint:
 - String.prototype.slice()
 
-#### Test:
+#### Test Cases:
 - truncateString("A-tisket a-tasket A green and yellow basket", 11) should return "A-tisket...".
 - truncateString("Peter Piper picked a peck of pickled peppers", 14) should return "Peter Piper...".
 - truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length) should return "A-tisket a-tasket A green and yellow basket".
@@ -138,8 +138,7 @@ However, if the given maximum string length num is less than or equal to 3, then
 - truncateString("A-", 1) should return "A...".
 - truncateString("Absolutely Longer", 2) should return "Ab...".
 
-
-## 11) Chunky Monkey
+## 11) CHUNKY MONKEY
 
 Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.
 
@@ -147,7 +146,7 @@ Write a function that splits an array (first argument) into groups the length of
 - Array.prototype.push()
 - Array.prototype.slice()
 
-#### Test:
+#### Test Cases:
 - chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].
 - chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
 - chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2) should return [[0, 1], [2, 3], [4, 5]].
@@ -157,7 +156,7 @@ Write a function that splits an array (first argument) into groups the length of
 - chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2) should return [[0, 1], [2, 3], [4, 5], [6, 7], [8]].
 
 
-## 12) Slasher Flick
+## 12) SLASHER FLICK
 
 Return the remaining elements of an array after chopping off n elements from the head.
 
@@ -167,7 +166,7 @@ The head means the beginning of the array, or the zeroth index.
 - Array.prototype.slice()
 - Array.prototype.splice()
 
-#### Test:
+#### Test Cases:
 - slasher([1, 2, 3], 2) should return [3].
 - slasher([1, 2, 3], 0) should return [1, 2, 3].
 - slasher([1, 2, 3], 9) should return [].
@@ -175,7 +174,7 @@ The head means the beginning of the array, or the zeroth index.
 - slasher(["burgers", "fries", "shake"], 1) should return ["fries", "shake"].
 - slasher([1, 2, "chicken", 3, "potatoes", "cheese", 4], 5) should return ["cheese", 4].
 
-## 13) Mutations
+## 13) MUTATIONS
 
 Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.
 
@@ -188,7 +187,7 @@ Lastly, ["Alien", "line"], should return true because all of the letters in "lin
 #### Hint:
 - String.prototype.indexOf()
 
-#### Test:
+#### Test Cases:
 - mutation(["hello", "hey"]) should return false.
 - mutation(["hello", "Hello"]) should return true.
 - mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]) should return true.
@@ -199,8 +198,7 @@ Lastly, ["Alien", "line"], should return true because all of the letters in "lin
 - mutation(["hello", "neo"]) should return false.
 - mutation(["voodoo", "no"]) should return false.
 
-
-## 14) Seek and Destroy
+## 14) SEEK AND DESTROY
 
 You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
 
@@ -208,14 +206,14 @@ You will be provided with an initial array (the first argument in the destroyer 
 Arguments object
 Array.prototype.filter()
 
-#### Test:
+#### Test Cases:
 - destroyer([1, 2, 3, 1, 2, 3], 2, 3) should return [1, 1].
 - destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3) should return [1, 5, 1].
 - destroyer([3, 5, 1, 2, 2], 2, 3, 5) should return [1].
 - destroyer([2, 3, 2, 3], 2, 3) should return [].
 - destroyer(["tree", "hamburger", 53], "tree", 53) should return ["hamburger"].
 
-## 15) Where do I belong
+## 15) WHERE DO I BELONG
 
 Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.
 
@@ -226,7 +224,7 @@ Likewise, getIndexToIns([20,3,5], 19) should return 2 because once the array has
 #### Hint:
 - Array.prototype.sort()
 
-#### Test:
+#### Test Cases:
 - getIndexToIns([10, 20, 30, 40, 50], 35) should return 3.
 - getIndexToIns([10, 20, 30, 40, 50], 30) should return 2.
 - getIndexToIns([40, 60], 50) should return 1.
@@ -235,21 +233,18 @@ Likewise, getIndexToIns([20,3,5], 19) should return 2 because once the array has
 - getIndexToIns([2, 20, 10], 19) should return 2.
 - getIndexToIns([2, 5, 10], 15) should return 3.
 
-## 16) Caesars Cipher
+## 16) CAESARS CIPHER
 
 One of the simplest and most widely known ciphers is a Caesar cipher, also known as a shift cipher. In a shift cipher the meanings of the letters are shifted by some set amount.
-
 A common modern use is the ROT13 cipher, where the values of the letters are shifted by 13 places. Thus 'A' ↔ 'N', 'B' ↔ 'O' and so on.
-
 Write a function which takes a ROT13 encoded string as input and returns a decoded string.
-
 All letters will be uppercase. Do not transform any non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
 
 #### Hint:
 - String.prototype.charCodeAt()
 - String.fromCharCode()
 
-#### Test:
+#### Test Cases:
 - rot13("SERR PBQR PNZC") should decode to "FREE CODE CAMP"
 - rot13("SERR CVMMN!") should decode to "FREE PIZZA!"
 - rot13("SERR YBIR?") should decode to "FREE LOVE?"

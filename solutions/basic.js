@@ -18,8 +18,7 @@ module.exports.reverseString = (str) => {
 /**
  * Factorialize a Number
  * 
- * Return the factorial of the provided integer. 
- * If the integer is represented with the letter n, a factorial is the product of all positive integers less than or equal to n.
+ * Return the factorial of the provided integer.
  * 
  * @param {Number} num
  * @return {Number}
@@ -28,6 +27,7 @@ module.exports.factorize = (num) => {
 
 	var total = 1;
 	if (typeof (num) !== 'number') return false;
+	
 	if (num === 0) {
 		total = 1;
 	} else {
@@ -120,7 +120,7 @@ module.exports.titleCase = (str) => {
 module.exports.largestOfFour = (arr) => {
 	var newArr = [];
 	for (var i = 0; i < arr.length; i++) {
-		var numberArr = arr[i];		
+		var numberArr = arr[i];
 		var num = numberArr.reduce((largest, next) => {
 			largest = next > largest ? next : largest;
 			return largest;
@@ -144,7 +144,7 @@ module.exports.largestOfFour = (arr) => {
  */
 module.exports.confirmEnding = (word, str) => {
 	var count = str.length;
-	return word.substr(-count) === str ? true : false; 
+	return word.substr(-count) === str ? true : false;
 }
 
 /**
@@ -160,7 +160,7 @@ module.exports.confirmEnding = (word, str) => {
 module.exports.repeatStringNumTimes = (str, times) => {
 	var newStr = '';
 	for (var i = 0; i < times; i++) {
-		newStr += str;		
+		newStr += str;
 	}
 	newStr = times < 0 ? '' : newStr;
 	return newStr;
@@ -200,9 +200,9 @@ module.exports.truncateString = (str, len) => {
  */
 module.exports.chunkArrayInGroups = (arr, len) => {
 	const newArr = [];
-	let jump = len-1;
+	let jump = len - 1;
 
-	for (var i = 0; i < arr.length; i+jump) {
+	for (var i = 0; i < arr.length; i + jump) {
 		var item = arr.splice(i, len);
 		newArr.push(item);
 	}
@@ -223,7 +223,7 @@ module.exports.slasher = (arr, len) => {
 	for (var i = len; i < arr.length; i++) {
 		const item = arr[i];
 		newArr.push(item);
-	}	
+	}
 	return newArr;
 }
 
@@ -258,7 +258,7 @@ module.exports.mutation = (arr) => {
  * @param {Array} arguments
  * @return {Array}
  */
-module.exports.destroyer = (arr, ...args) => {	
+module.exports.destroyer = (arr, ...args) => {
 	var newItem = arr.filter((item, index) => {
 		if (args.indexOf(item) === -1) {
 			return item;
@@ -267,34 +267,30 @@ module.exports.destroyer = (arr, ...args) => {
 	return newItem;
 }
 
-var getIndexToIns = (arr, num) => {
+module.exports.getIndexToIns = (arr, num) => {
+	let pos;
 
-	return [5, 3, 20, 3].sort()
+	const sortedArr = arr.sort((prev, next) => {
+		return prev - next;
+	});
 
-	// for (var i = 0; i < sortedArr.length; i++) {
-	// 	let item = sortedArr[i];
-	// 	let nextItem = sortedArr[i+1];
+	if (sortedArr.indexOf(num) !== -1) {
+		pos = sortedArr.indexOf(num);
+	} else if (num > sortedArr[sortedArr.length - 1]) {
+		pos = sortedArr.length;	
+	} else {
 
-		
-		
-	// }
+		for (var i = 0; i < sortedArr.length; i++) {
+			let item = sortedArr[i];
+			let nextItem = sortedArr[i + 1];
 
-	
-	// if (sortedArr.indexOf(num) !== -1) {
-	// 	return sortedArr.indexOf(num);
-	// } else {
-		
-		
-	// 	for (var i = 0; i < sortedArr.length; i++) {
-	// 		let item = sortedArr[i];
-	// 		let nextItem = sortedArr[i+1];
+			if (num > item && num < nextItem) {
+				pos = i + 1;
+			}
+		}
+	}
 
-	// 		if (num > item && num < nextItem){
-	// 			return  typeof(nextItem) === 'undefined' ? i : i+1;
-	// 		}
-			
-	// 	}
-	// }
+	return pos;
 }
 
 /**
@@ -314,7 +310,7 @@ module.exports.rot13 = (str) => {
 
 		if (char.match(/[A-Z]/) !== null) {
 			code += 13;
-			if (code > 90){
+			if (code > 90) {
 				code = code - 90;
 				code = code + 64;
 			}
@@ -323,3 +319,5 @@ module.exports.rot13 = (str) => {
 	}
 	return newStr;
 }
+
+// console.log(getIndexToIns([20, 3, 5, 10], 5));

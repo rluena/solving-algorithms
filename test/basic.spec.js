@@ -12,12 +12,13 @@ const truncateString = require('../solutions/basic').truncateString;
 const chunkArrayInGroups = require('../solutions/basic').chunkArrayInGroups;
 const slasher = require('../solutions/basic').slasher;
 const mutation = require('../solutions/basic').mutation;
+const getIndexToIns = require('../solutions/basic').getIndexToIns;
 const destroyer = require('../solutions/basic').destroyer;
 const rot13 = require('../solutions/basic').rot13;
 
-describe.only('Basic Algorithms', () => {
+describe('Basic Algorithms', () => {
 
-	describe.only('#reverseString', () => {
+	describe('#reverseString', () => {
 		it('should return a string', () => {
 			expect(reverseString('Hello!')).to.be.a('string');
 		});
@@ -328,7 +329,41 @@ describe.only('Basic Algorithms', () => {
 		});
 	});
 
-	describe('#destroyer', () => {
+	describe('#getIndexToIns', () => {
+		it('should be Number', () => {
+			expect(getIndexToIns([5, 3, 20, 3], 5)).to.be.a('number');
+		});
+	
+		it('should be equal to 2', () => {
+			expect(getIndexToIns([5, 3, 20, 3], 5)).to.be.equal(2);
+		});
+		
+		it('should be equal to 2', () => {
+			expect(getIndexToIns([2, 20, 10], 19)).to.be.equal(2);
+		});
+		
+		it('should be equal to 3', () => {
+			expect(getIndexToIns([2, 5, 10], 15)).to.be.equal(3);
+		});
+		
+		it('should be equal to 0', () => {
+			expect(getIndexToIns([3, 10, 5], 3)).to.be.equal(0);
+		});
+		
+		it('should be equal to 1', () => {
+			expect(getIndexToIns([40, 60], 50)).to.be.equal(1);
+		});
+		
+		it('should be equal to 2', () => {
+			expect(getIndexToIns([10, 20, 30, 40, 50], 30)).to.be.equal(2);
+		});
+		
+		it('should be equal to 3', () => {
+			expect(getIndexToIns([10, 20, 30, 40, 50], 35)).to.be.equal(3);
+		});
+	});
+
+	describe('#ROT13', () => {
 		it('should be return [1, 1]', () => {
 			assert.deepEqual(destroyer([1, 2, 3, 1, 2, 3], 2, 3), [1, 1]);
 		});

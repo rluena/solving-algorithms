@@ -15,9 +15,9 @@ const mutation = require('../solutions/basic').mutation;
 const destroyer = require('../solutions/basic').destroyer;
 const rot13 = require('../solutions/basic').rot13;
 
-describe('Basic Algorithms', () => {
+describe.only('Basic Algorithms', () => {
 
-	describe('#reverseString', () => {
+	describe.only('#reverseString', () => {
 		it('should return a string', () => {
 			expect(reverseString('Hello!')).to.be.a('string');
 		});

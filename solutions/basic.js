@@ -10,6 +10,9 @@ module.exports.reverseString = (str) => {
 		newStr += str[i];
 	}
 	return newStr;
+
+	// Alternative solution
+	// return str.split('').reverse().join('');
 }
 
 /**

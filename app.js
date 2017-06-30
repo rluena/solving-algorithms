@@ -1,6 +1,6 @@
 /*
     MEDIUM ARTICLES
-    1. What I have learned from freeCodeCamp beyond their carriculum.
+    What I have learned from freeCodeCamp beyond their carriculum.
         a. Proper way of writing unit tests
         b. Proper way of writing your commit message
         c. Proper way of writing user stories for a new project.

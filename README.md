@@ -1,0 +1,2 @@
+### Solving FreeCodeCamp algorith
+#### This repo will be updated with algorithmic solutions solved by myself. Algorithm problems will be taken from different online sources, for starting I will begin with FreeCodeCamp basic, intermediate and advanced problems.

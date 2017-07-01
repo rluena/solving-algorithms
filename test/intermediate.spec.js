@@ -8,10 +8,10 @@ describe('Intermediate Algorithms', () => {
         it('should be an array', () => {
             expect(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])).to.be.an('array');
         });
-        
+
         it('should be equal to [4]', () => {
             assert.deepEqual(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]), [4]);
         });
-        
+
     });
 });

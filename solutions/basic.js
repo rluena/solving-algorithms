@@ -13,7 +13,7 @@ module.exports.reverseString = (str) => {
 
 	// Alternative solution
 	// return str.split('').reverse().join('');
-}
+};
 
 /**
  * Factorialize a Number
@@ -36,7 +36,7 @@ module.exports.factorialize = (num) => {
 		}
 	}
 	return total;
-}
+};
 
 /**
  * Check for Palindromes
@@ -49,11 +49,11 @@ module.exports.factorialize = (num) => {
 module.exports.palindrome = (str) => {
 
 	// Removing white spaces and non-alphanumeric characters
-	let  newStr = str.replace(/[\W_\s]/g, "").toLowerCase();
+	let  newStr = str.replace(/[\W_\s]/g, '').toLowerCase();
 	let  reversedStr = newStr.split('').reverse().join('');
-
+	
 	return newStr === reversedStr ? true : false;
-}
+};
 
 /**
  * Find the longest word in a string
@@ -79,7 +79,7 @@ module.exports.findLongestWord = (str) => {
 	    len = word.length > len ? word.length : len;        
 	}*/
 	return longest;
-}
+};
 
 /**
  * Title Case a Sentence
@@ -106,7 +106,7 @@ module.exports.titleCase = (str) => {
 	}).join(' ');
 
 	return newStr;
-}
+};
 
 /**
  * Find Largest Numbers in Arrays
@@ -129,7 +129,7 @@ module.exports.largestOfFour = (arr) => {
 	}
 
 	return newArr;
-}
+};
 
 /**
  * Confirm Endings
@@ -145,7 +145,7 @@ module.exports.largestOfFour = (arr) => {
 module.exports.confirmEnding = (word, str) => {
 	let count = str.length;
 	return word.substr(-count) === str ? true : false;
-}
+};
 
 /**
  *  Repeat a string
@@ -164,7 +164,7 @@ module.exports.repeatStringNumTimes = (str, times) => {
 	}
 	newStr = times < 0 ? '' : newStr;
 	return newStr;
-}
+};
 
 /**
  * Truncating String
@@ -179,14 +179,14 @@ module.exports.repeatStringNumTimes = (str, times) => {
 module.exports.truncateString = (str, len) => {
 	let newStr = '';
 	if (len >= str.length) {
-		newStr = str
+		newStr = str;
 	} else {
 		len = len > 3 ? len - 3 : len;
 		newStr = str.slice(0, len) + '...';
 	}
 
 	return newStr;
-}
+};
 
 /**
  * Chunky Monkey
@@ -207,7 +207,7 @@ module.exports.chunkArrayInGroups = (arr, len) => {
 		newArr.push(item);
 	}
 	return newArr;
-}
+};
 
 /**
  * Slasher Flick
@@ -225,7 +225,7 @@ module.exports.slasher = (arr, len) => {
 		newArr.push(item);
 	}
 	return newArr;
-}
+};
 
 /**
  * Mutations
@@ -245,7 +245,7 @@ module.exports.mutation = (arr) => {
 		}
 	}
 	return !notFound;
-}
+};
 
 /**
  *  Seek and Destroy
@@ -265,7 +265,7 @@ module.exports.destroyer = (arr, ...args) => {
 		}
 	});
 	return newItem;
-}
+};
 
 module.exports.getIndexToIns = (arr, num) => {
 	let pos;
@@ -291,7 +291,7 @@ module.exports.getIndexToIns = (arr, num) => {
 	}
 
 	return pos;
-}
+};
 
 /**
  * ROT13
@@ -318,4 +318,4 @@ module.exports.rot13 = (str) => {
 		newStr += String.fromCharCode(code);
 	}
 	return newStr;
-}
+};

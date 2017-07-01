@@ -27,7 +27,7 @@ module.exports.factorialize = (num) => {
 
 	let total = 1;
 	if (typeof (num) !== 'number') return false;
-	
+
 	if (num === 0) {
 		total = 1;
 	} else {
@@ -49,9 +49,9 @@ module.exports.factorialize = (num) => {
 module.exports.palindrome = (str) => {
 
 	// Removing white spaces and non-alphanumeric characters
-	let  newStr = str.replace(/[\W_\s]/g, '').toLowerCase();
-	let  reversedStr = newStr.split('').reverse().join('');
-	
+	let newStr = str.replace(/[\W_\s]/g, '').toLowerCase();
+	let reversedStr = newStr.split('').reverse().join('');
+
 	return newStr === reversedStr ? true : false;
 };
 
@@ -248,6 +248,23 @@ module.exports.mutation = (arr) => {
 };
 
 /**
+ * Falsy Bouncer
+ * 
+ * Remove all falsy values from an array.
+ * @param {Array} arr
+ * @return {Array}
+ */
+module.exports.bouncer = (arr) => {
+	const newArr = arr.filter(function (item) {
+		if (item !== false || null || 0 || '' || undefined || NaN) {
+			return item;
+		}
+
+	});
+	return newArr;
+};
+
+/**
  *  Seek and Destroy
  * 
  * You will be provided with an initial array (the first argument in the destroyer function), 
@@ -277,7 +294,7 @@ module.exports.getIndexToIns = (arr, num) => {
 	if (sortedArr.indexOf(num) !== -1) {
 		pos = sortedArr.indexOf(num);
 	} else if (num > sortedArr[sortedArr.length - 1]) {
-		pos = sortedArr.length;	
+		pos = sortedArr.length;
 	} else {
 
 		for (let i = 0; i < sortedArr.length; i++) {

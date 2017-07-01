@@ -12,6 +12,7 @@ const truncateString = require('../solutions/basic').truncateString;
 const chunkArrayInGroups = require('../solutions/basic').chunkArrayInGroups;
 const slasher = require('../solutions/basic').slasher;
 const mutation = require('../solutions/basic').mutation;
+const bouncer = require('../solutions/basic').bouncer;
 const getIndexToIns = require('../solutions/basic').getIndexToIns;
 const destroyer = require('../solutions/basic').destroyer;
 const rot13 = require('../solutions/basic').rot13;
@@ -325,6 +326,28 @@ describe('Basic Algorithms', () => {
 
 		it('should return false', () => {
 			expect(mutation(["voodoo", "no"])).to.be.equal(false);
+		});
+	});
+
+	describe('#bouncer', () => {
+		it('should return an array', () => {
+			expect(bouncer([7, 'ate', '', false, 9])).to.be.an('array');
+		});
+
+		it('should return [7, "ate", 9]', () => {
+			assert.deepEqual(bouncer([7, 'ate', '', false, 9]), [7, 'ate', 9]);
+		});
+		
+		it('should return ["a", "b", "c"]', () => {
+			assert.deepEqual(bouncer(['a', 'b', 'c']), ['a', 'b', 'c']);
+		});
+		
+		it('should return []', () => {
+			assert.deepEqual(bouncer([false, null, 0, NaN, undefined, '']), []);
+		});
+		
+		it('should return [1, 2]', () => {
+			assert.deepEqual(bouncer([1, null, NaN, 2, undefined]), [1, 2]);
 		});
 	});
 

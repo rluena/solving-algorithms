@@ -2,7 +2,7 @@ const mocha = require('mocha');
 const expect = require('chai').expect;
 const assert = require('chai').assert;
 const reverseString = require('../solutions/basic').reverseString;
-const factorize = require('../solutions/basic').factorize;
+const factorialize = require('../solutions/basic').factorialize;
 const palindrome = require('../solutions/basic').palindrome;
 const findLongestWord = require('../solutions/basic').findLongestWord;
 const titleCase = require('../solutions/basic').titleCase;
@@ -28,17 +28,17 @@ describe('Basic Algorithms', () => {
 		});
 	});
 
-	describe('#factorize', () => {
+	describe('#factorialize', () => {
 		it('should be a number', () => {
-			expect(factorize(5)).to.be.a('number');
-			expect(factorize('some string')).to.be.equal(false);
+			expect(factorialize(5)).to.be.a('number');
+			expect(factorialize('some string')).to.be.equal(false);
 		});
 
 		it('should return 1, 120, 3628800 and 2432902008176640000', () => {
-			expect(factorize(0)).to.be.equal(1);
-			expect(factorize(5)).to.be.equal(120);
-			expect(factorize(10)).to.be.equal(3628800);
-			expect(factorize(20)).to.be.equal(2432902008176640000);
+			expect(factorialize(0)).to.be.equal(1);
+			expect(factorialize(5)).to.be.equal(120);
+			expect(factorialize(10)).to.be.equal(3628800);
+			expect(factorialize(20)).to.be.equal(2432902008176640000);
 		});
 	});
 
@@ -167,7 +167,7 @@ describe('Basic Algorithms', () => {
 	});
 
 	describe('#repeatStringNumTimes', () => {
-		it('should be return string', () => {
+		it('should return a string', () => {
 			expect(repeatStringNumTimes("*", 3)).to.be.a("string");
 		});
 
@@ -197,7 +197,7 @@ describe('Basic Algorithms', () => {
 	});
 
 	describe('#truncateString', () => {
-		it('should be return string', () => {
+		it('should return a string', () => {
 			expect(truncateString("A-tisket a-tasket A green and yellow basket", 11)).to.be.a("string");
 		});
 
@@ -233,7 +233,6 @@ describe('Basic Algorithms', () => {
 		
 		it('should be equal to [["a", "b"], ["c", "d"]', () => {
 			assert.deepEqual(chunkArrayInGroups(["a", "b", "c", "d"], 2), [["a", "b"], ["c", "d"]]);
-			// assert(chunkArrayInGroups(["a", "b", "c", "d"], 2)).deepEqual([["a", "b"], ["c", "d"]]);
 		});
 		
 		it('should be equal to [[0, 1, 2], [3, 4, 5]]', () => {
@@ -258,7 +257,7 @@ describe('Basic Algorithms', () => {
 	});
 
 	describe('#slasher', () => {
-		it('should be return [3]', () => {
+		it('should be return an array', () => {
 			expect(slasher([1, 2, 3], 2)).to.be.a('array');
 		});
 		
@@ -288,7 +287,7 @@ describe('Basic Algorithms', () => {
 	});
 
 	describe('#mutation', () => {
-		it('should be return boolean', () => {
+		it('should return boolean', () => {
 			expect(mutation(["hello", "hey"])).to.be.a('boolean');
 		});
 
@@ -330,7 +329,7 @@ describe('Basic Algorithms', () => {
 	});
 
 	describe('#getIndexToIns', () => {
-		it('should be Number', () => {
+		it('should be a number', () => {
 			expect(getIndexToIns([5, 3, 20, 3], 5)).to.be.a('number');
 		});
 	

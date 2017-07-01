@@ -259,7 +259,7 @@ module.exports.mutation = (arr) => {
  * @return {Array}
  */
 module.exports.destroyer = (arr, ...args) => {
-	let newItem = arr.filter((item) => {
+	let newItem = arr.filter((item, index) => {
 		if (args.indexOf(item) === -1) {
 			return item;
 		}
@@ -319,3 +319,5 @@ module.exports.rot13 = (str) => {
 	}
 	return newStr;
 }
+
+// console.log(getIndexToIns([20, 3, 5, 10], 5));

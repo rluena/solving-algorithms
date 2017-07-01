@@ -9,7 +9,7 @@ describe('Intermediate Algorithms', () => {
             expect(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5])).to.be.an('array');
         });
         
-        it('should return ', () => {
+        it('should be equal to [4]', () => {
             assert.deepEqual(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]), [4]);
         });
         
